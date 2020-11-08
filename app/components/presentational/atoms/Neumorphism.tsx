@@ -14,7 +14,7 @@ export const NeumorphismInSideStyle = css`
 `
 
 export const NeumorphismStyle = styled.div<NeumorphismType>`
-  background-color: ${Color.mail};
+  background-color: ${Color.main};
   box-shadow: ${({ type }) =>
     type === "inSide"
       ? `inset -4px -4px 12px 0 ${Color.lightShadow}, inset 4px 4px 12px 0 ${Color.blackShadow}`

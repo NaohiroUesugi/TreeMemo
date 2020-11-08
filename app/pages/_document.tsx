@@ -1,4 +1,4 @@
-import {Document, Html, DocumentHead, Main, BlitzScript /*DocumentContext*/} from 'blitz'
+import { Document, Html, DocumentHead, Main, BlitzScript /*DocumentContext*/ } from "blitz"
 
 class MyDocument extends Document {
   // Only uncomment if you need to customize this behaviour
@@ -9,13 +9,27 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en">
-        <DocumentHead />
-        <body>
-          <Main />
-          <BlitzScript />
-        </body>
-      </Html>
+      <>
+        <style jsx global>{`
+          html {
+            height: 100%;
+          }
+          body {
+            height: 100%;
+            margin: 0;
+          }
+          #__next {
+            height: 100%;
+          }
+        `}</style>
+        <Html lang="en">
+          <DocumentHead />
+          <body>
+            <Main />
+            <BlitzScript />
+          </body>
+        </Html>
+      </>
     )
   }
 }
