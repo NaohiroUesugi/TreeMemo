@@ -9,5 +9,5 @@ export default {
 } as Meta
 
 export const NeuphohismButton: React.FC = () => {
-  return <Button>AAA</Button>
+  return <Button label="AAA" />
 }
