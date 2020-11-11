@@ -22,5 +22,9 @@ module.exports = {
     "jsx-a11y/anchor-is-valid": "off", //Doesn't play well with Blitz/Next <Link> usage
     "react/prop-types": "off",
     "react/display-name": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-case-declarations": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-var-requires": "off",
   },
 }

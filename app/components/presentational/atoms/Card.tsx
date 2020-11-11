@@ -2,13 +2,20 @@ import React from "react"
 import styled from "styled-components"
 import { NeumorphismStyle, NeumorphismType } from "./Neumorphism"
 
-const CardStyle = styled(NeumorphismStyle)`
-  height: 200px;
-  width: 200px;
+type CardOnlyType = {
+  radius?: string
+  width: string
+  height: string
+}
+
+type CardType = NeumorphismType & CardOnlyType
+
+const CardStyle = styled(NeumorphismStyle)<CardOnlyType>`
+  height: ${({ height }) => height && height};
+  width: ${({ width }) => width && width};
+  border-radius: ${({ radius }) => radius && radius};
 `
 
-type CardType = NeumorphismType
-
-export const Card: React.FC<CardType> = ({ type = "outSide" }) => {
-  return <CardStyle type={type}></CardStyle>
+export const Card: React.FC<CardType> = ({ type = "outSide", radius, width, height }) => {
+  return <CardStyle type={type} radius={radius} width={width} height={height} />
 }

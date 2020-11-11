@@ -12,14 +12,14 @@ class MyDocument extends Document {
       <>
         <style jsx global>{`
           html {
-            height: 100%;
+            height: auto;
           }
           body {
-            height: 100%;
+            height: auto;
             margin: 0;
           }
           #__next {
-            height: 100%;
+            height: auto;
           }
         `}</style>
         <Html lang="en">

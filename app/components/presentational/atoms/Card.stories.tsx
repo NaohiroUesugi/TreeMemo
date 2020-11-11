@@ -9,9 +9,17 @@ export default {
 } as Meta
 
 export const UpCard: React.FC = () => {
-  return <Card type="outSide">AAA</Card>
+  return (
+    <Card type="outSide" width="100px" height="100px">
+      AAA
+    </Card>
+  )
 }
 
 export const DownCard: React.FC = () => {
-  return <Card type="inSide">AAA</Card>
+  return (
+    <Card type="inSide" width="100px" height="100px">
+      AAA
+    </Card>
+  )
 }
