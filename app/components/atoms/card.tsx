@@ -1,6 +1,5 @@
-import React from "react"
 import styled from "styled-components"
-import { NeumorphismStyle, NeumorphismType } from "./Neumorphism"
+import { NeumorphismStyle, NeumorphismType } from "./neumorphism"
 
 type CardOnlyType = {
   radius?: string

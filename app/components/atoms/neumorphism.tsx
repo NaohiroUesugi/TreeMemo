@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components"
-import { Color } from "./Color"
+import { Color } from "./color"
 
 export type NeumorphismType = {
   type: "inSide" | "outSide"

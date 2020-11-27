@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
-import { NeumorphismOutSideStyle, NeumorphismInSideStyle } from "./Neumorphism"
+import { NeumorphismOutSideStyle, NeumorphismInSideStyle } from "./neumorphism"
 
 const ButtonStyle = styled.button<{ isMouseUp: boolean }>`
   background-color: transparent;

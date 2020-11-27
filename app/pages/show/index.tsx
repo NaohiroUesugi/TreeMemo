@@ -1,11 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import styled from "styled-components"
-import { Color } from "app/components/presentational/atoms/Color"
-import { Card } from "app/components/presentational/atoms/Card"
-import { Text } from "app/components/presentational/atoms/Text"
+import { Color } from "app/components/atoms/color"
+import { Card } from "app/components/atoms/card"
+import { Text } from "app/components/atoms/text"
+import { GridCard } from "app/components/molecules/grid-cards"
 
 const LeftPane = styled.div`
-  height: auto;
   min-width: 200px;
   background-color: ${Color.sub};
 `
@@ -13,7 +13,6 @@ const LeftPane = styled.div`
 const RightPane = styled.div`
   flex: 1;
   padding: 50px 15% 30px 100px;
-  height: auto;
   background-color: ${Color.main};
 `
 
@@ -23,8 +22,7 @@ const TitleText = styled(Text)`
   font-weight: bold;
 `
 
-const Aaa = styled.div`
-  height: auto;
+const VerticalBorder = styled.div`
   width: 10px;
   background-color: ${Color.main};
   box-shadow: -4px 0px 12px 0 ${Color.lightShadow}, 4px 0px 12px 0 ${Color.blackShadow};
@@ -38,30 +36,16 @@ const Flex = styled.div`
   margin-bottom: 30px;
 `
 
-const RelatidMemo = styled.div`
-  display: flex;
-  margin-top: 30px;
-  justify-content: space-between;
-`
-
 const Show: React.FC = () => {
   return (
     <Flex>
       <LeftPane />
-      <Aaa />
+      <VerticalBorder />
       <RightPane>
         <TitleText>TITLE</TitleText>
         <Card type="inSide" width="100%" radius="25px" height="300px" />
-        <RelatidMemo>
-          <Card type="outSide" width="30%" radius="25px" height="200px" />
-          <Card type="outSide" width="30%" radius="25px" height="200px" />
-          <Card type="outSide" width="30%" radius="25px" height="200px" />
-        </RelatidMemo>
-        <RelatidMemo>
-          <Card type="outSide" width="30%" radius="25px" height="200px" />
-          <Card type="outSide" width="30%" radius="25px" height="200px" />
-          <Card type="outSide" width="30%" radius="25px" height="200px" />
-        </RelatidMemo>
+        <GridCard />
+        <GridCard />
       </RightPane>
     </Flex>
   )

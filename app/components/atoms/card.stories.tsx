@@ -1,7 +1,6 @@
-import React from "react"
 import { Meta } from "@storybook/react/types-6-0"
 
-import { Card } from "./Card"
+import { Card } from "./card"
 
 export default {
   title: "Atoms/Card",
